@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+body,
+html {
+    font-family: sans-serif;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-button: #02200f;
+    --border-button: solid 1px rgb(10, 1, 1);
+    --border-button-op: solid 1px rgb(19, 20, 22);
+}
+
+/* ------------- background ------------- */
+
+#root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #eee7e7;
+    background: linear-gradient(to left, #37443c, #0f110f);
+}
+
+/* ------------- titulo ------------- */
+h1 {
+    font-size: 3rem;
+    padding: 0 6px 20px;
+    font-family: 'Pacifico', cursive;
+    color: rgb(223, 25, 25);
+}
+
+/* ------------- corpo da calculadora ------------- */
+.calculadora {
+    height: 320px;
+    width: 235px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 1fr repeat(5, 48px);
+    margin: auto;
+}
+
+.span-3 {
+    grid-column: span 3;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+
+/* ------------- display ------------- */
+.display {
+    grid-column: span 4;
+    background-color: rgba(3, 58, 43, 0.945);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    font-size: 1.8rem;
+}
+
+
+/* ------------- button ------------- */
+.button {
+    font-size: 1.4rem;
+    background-color: var(--cor-button);
+    color: rgb(223, 25, 25);
+    border: none;
+    border-right: var(--border-button);
+    border-bottom: var(--border-button);
+    outline: none;
+}
+
+.button:active {
+    opacity: .7;
+}
+
+
+.button.op {
+    background-color: dodgerblue;
+    color: rgb(223, 25, 25);
+    border-right: var(--border-button-op);
+    border-bottom: var(--border-button-op);
+}
+
+.button.op:active {
+    opacity: .5;
+}
